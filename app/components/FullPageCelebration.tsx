@@ -14,7 +14,6 @@ const FullPageCelebration: React.FC<FullPageCelebrationProps> = ({ level }) => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const [xpBarStart, setXpBarStart] = useState<boolean>(false);
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
-  const rewards = ["Gold Badge", "500 XP", "Special Item"];
 
   useEffect(() => {
     setIsOpen(true);
@@ -106,6 +105,8 @@ const FullPageCelebration: React.FC<FullPageCelebrationProps> = ({ level }) => {
               <Image
                 src="/goldbadge.png"
                 alt="New Badge"
+                width={150}
+                height={150}
                 className="h-[150px] w-[150px] text-center"
               />
             </motion.div>
@@ -148,11 +149,7 @@ const FullPageCelebration: React.FC<FullPageCelebrationProps> = ({ level }) => {
             </div>
 
             <p className="mt-6 text-center text-[#f6e1a9] md:text-[10px] text-[10px] leading-relaxed relative z-10">
-              To claim your new badge, you'll need to transfer your previous
-              badge from your wallet for it to be burned in exchange for the new
-              one. If there's insufficient gas in your wallet, the transaction
-              will be canceled. You can always visit your Inventory and claim
-              your badge at any time.
+              {"To claim your new badge, you'll need to transfer your previous badge from your wallet for it to be burned in exchange for the new one. If there's insufficient gas in your wallet, the transaction will be canceled. You can always visit your Inventory and claim your badge at any time."}
             </p>
           </div>
         </motion.div>

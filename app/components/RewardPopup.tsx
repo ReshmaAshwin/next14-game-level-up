@@ -97,10 +97,12 @@ const RewardPopup: React.FC<RewardPopupProps> = ({
             className="relative h-[75px] w-[75px]"
             variants={badgeVariants}
           >
-            <Image src="/shape.svg" alt="New Badge" />
+            <Image src="/shape.svg" width={75} height={75} alt="New Badge" />
             <div className="absolute left-3 top-2">
               <Image
                 src="/goldbadge.png"
+                width={75}
+                height={75}
                 alt="New Badge"
                 className="w-[50px] h-[50px] text-center"
               />
@@ -111,11 +113,13 @@ const RewardPopup: React.FC<RewardPopupProps> = ({
             className="relative h-[75px] w-[75px]"
             variants={badgeVariants}
           >
-            <Image src="/shape.svg" alt="New Badge" />
+            <Image src="/shape.svg" width={75} height={75} alt="coin" />
             <div className="absolute left-3 top-2">
               <Image
                 src="/gold.png"
                 alt="New Badge"
+                width={50}
+                height={50}
                 className="w-[50px] h-[50px] text-center"
               />
               <p className="text-[8px] text-[#f0f335]">{coins} Coins</p>
@@ -125,7 +129,7 @@ const RewardPopup: React.FC<RewardPopupProps> = ({
             className="relative h-[75px] w-[75px]"
             variants={badgeVariants}
           >
-            <Image src="/shape.svg" alt="New Badge" />
+            <Image src="/shape.svg" width={75} height={75} alt="life" />
             <div className="absolute left-4 top-3">
               <motion.img
                 src="/life.svg"

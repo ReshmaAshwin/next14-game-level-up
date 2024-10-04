@@ -20,7 +20,7 @@ const Sparkle: React.FC<{ x: string; y: string }> = ({ x, y }) => {
       initial="hidden"
       animate="visible"
     >
-      <Image src="/star.svg" alt="Sparkle" className="w-6 h-3" />
+      <Image src="/star.svg" alt="Sparkle" width={400} height={200} className="w-4 h-2" />
     </motion.div>
   );
 };
