@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Sparkle from "./Sparkle";
 import RewardPopup from "./RewardPopup";
+import Image from "next/image";
 
 interface FullPageCelebrationProps {
   level: number;
@@ -12,8 +13,8 @@ interface FullPageCelebrationProps {
 const FullPageCelebration: React.FC<FullPageCelebrationProps> = ({ level }) => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const [xpBarStart, setXpBarStart] = useState<boolean>(false);
-  const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false); 
-  const rewards = ["Gold Badge", "500 XP", "Special Item"]; 
+  const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
+  const rewards = ["Gold Badge", "500 XP", "Special Item"];
 
   useEffect(() => {
     setIsOpen(true);
@@ -41,8 +42,8 @@ const FullPageCelebration: React.FC<FullPageCelebrationProps> = ({ level }) => {
   };
 
   const handleClaimBadge = () => {
-    setIsOpen(false); 
-    setIsPopupOpen(true); 
+    setIsOpen(false);
+    setIsPopupOpen(true);
   };
 
   return (
@@ -102,7 +103,7 @@ const FullPageCelebration: React.FC<FullPageCelebrationProps> = ({ level }) => {
                 repeatDelay: 1,
               }}
             >
-              <img
+              <Image
                 src="/goldbadge.png"
                 alt="New Badge"
                 className="h-[150px] w-[150px] text-center"
@@ -161,7 +162,6 @@ const FullPageCelebration: React.FC<FullPageCelebrationProps> = ({ level }) => {
       {isPopupOpen && (
         <RewardPopup
           isOpen={isPopupOpen}
-          rewards={rewards}
           onClose={() => setIsPopupOpen(false)}
           coins={currentCoins}
         />

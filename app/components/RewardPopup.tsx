@@ -2,10 +2,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import CloseRoundedIcon from "@mui/icons-material/Close";
+import Image from "next/image";
 
 interface RewardPopupProps {
   isOpen: boolean;
-  rewards: string[];
   onClose: () => void;
   coins: number;
 }
@@ -38,7 +38,6 @@ const heartBeatVariants = {
 
 const RewardPopup: React.FC<RewardPopupProps> = ({
   isOpen,
-  rewards,
   onClose,
   coins,
 }) => {
@@ -98,9 +97,9 @@ const RewardPopup: React.FC<RewardPopupProps> = ({
             className="relative h-[75px] w-[75px]"
             variants={badgeVariants}
           >
-            <img src="/shape.svg" alt="New Badge" />
+            <Image src="/shape.svg" alt="New Badge" />
             <div className="absolute left-3 top-2">
-              <img
+              <Image
                 src="/goldbadge.png"
                 alt="New Badge"
                 className="w-[50px] h-[50px] text-center"
@@ -112,9 +111,9 @@ const RewardPopup: React.FC<RewardPopupProps> = ({
             className="relative h-[75px] w-[75px]"
             variants={badgeVariants}
           >
-            <img src="/shape.svg" alt="New Badge" />
+            <Image src="/shape.svg" alt="New Badge" />
             <div className="absolute left-3 top-2">
-              <img
+              <Image
                 src="/gold.png"
                 alt="New Badge"
                 className="w-[50px] h-[50px] text-center"
@@ -126,7 +125,7 @@ const RewardPopup: React.FC<RewardPopupProps> = ({
             className="relative h-[75px] w-[75px]"
             variants={badgeVariants}
           >
-            <img src="/shape.svg" alt="New Badge" />
+            <Image src="/shape.svg" alt="New Badge" />
             <div className="absolute left-4 top-3">
               <motion.img
                 src="/life.svg"

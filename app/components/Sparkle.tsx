@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Sparkle: React.FC<{ x: string; y: string }> = ({ x, y }) => {
   const sparkleVariants = {
@@ -19,7 +20,7 @@ const Sparkle: React.FC<{ x: string; y: string }> = ({ x, y }) => {
       initial="hidden"
       animate="visible"
     >
-      <img src="/star.svg" alt="Sparkle" className="w-6 h-3" />
+      <Image src="/star.svg" alt="Sparkle" className="w-6 h-3" />
     </motion.div>
   );
 };
